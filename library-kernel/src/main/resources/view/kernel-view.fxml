@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@kernel-styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.work.kernel.controller.KernelController">
+   <top>
+      <StackPane styleClass="header" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Library Management System" />
+         </children>
+      </StackPane>
+   </top>
+   <left>
+      <VBox fx:id="pluginMenu" styleClass="sidebar" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="contentArea" styleClass="content-area" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="welcome-text" text="Welcome! Please select a module." />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
