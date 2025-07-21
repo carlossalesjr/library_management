@@ -1,10 +1,9 @@
-/* Estilo geral da aplicação */
+
 .root {
     -fx-font-family: 'Segoe UI', sans-serif;
-    -fx-background-color: #EAEBEE; /* Fundo geral um pouco mais escuro */
+    -fx-background-color: #EAEBEE; 
 }
 
-/* Estilo do Cabeçalho Superior */
 .header {
     -fx-background-color: #FFFFFF;
     -fx-padding: 15;
@@ -14,16 +13,14 @@
 .header .label {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #005B9A; /* Um azul escuro para o título */
+    -fx-text-fill: #005B9A; 
 }
 
-/* Estilo da Barra Lateral de Navegação */
 .sidebar {
     -fx-background-color: #F4F4F9;
     -fx-padding: 10;
 }
 
-/* Estilo dos Botões na Barra Lateral */
 .sidebar-button {
     -fx-background-color: transparent;
     -fx-text-fill: #333333;
@@ -35,7 +32,7 @@
 }
 
 .sidebar-button:hover {
-    -fx-background-color: #D6EAF8; /* Um azul claro ao passar o rato */
+    -fx-background-color: #D6EAF8;
 }
 
 .sidebar-button:focused {
@@ -43,7 +40,6 @@
     -fx-text-fill: #005B9A;
 }
 
-/* Estilo da Área de Conteúdo Central */
 .content-area {
     -fx-padding: 20;
 }

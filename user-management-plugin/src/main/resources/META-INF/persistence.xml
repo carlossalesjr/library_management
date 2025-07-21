@@ -6,7 +6,6 @@
     <persistence-unit name="bookstore-pu" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         
-        <!-- Adicione aqui a sua classe de entidade para o Hibernate a reconhecer -->
         <class>com.work.users.model.User</class>
 
         <properties>

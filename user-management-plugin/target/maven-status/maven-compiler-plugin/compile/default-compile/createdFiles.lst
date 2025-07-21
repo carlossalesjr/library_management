@@ -1,5 +1,0 @@
-com/work/users/model/User.class
-com/work/users/util/JPAUtil.class
-com/work/users/UserManagementPlugin.class
-com/work/users/controller/UserManagementController.class
-com/work/users/dao/UserDAO.class
