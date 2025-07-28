@@ -1,0 +1,5 @@
+com/work/books/util/JPAUtil.class
+com/work/books/model/Book.class
+com/work/books/dao/BookDAO.class
+com/work/books/controller/BookManagementController.class
+com/work/books/BookManagementPlugin.class

@@ -11,14 +11,11 @@ import java.util.ServiceLoader;
 public class KernelController {
 
     @FXML
-    private VBox pluginMenu; // Injetado do FXML (a barra lateral)
+    private VBox pluginMenu; 
 
     @FXML
-    private StackPane contentArea; // Injetado do FXML (a área central)
+    private StackPane contentArea; 
 
-    /**
-     * Este método é chamado a partir da MainApp para iniciar a descoberta de plugins.
-     */
     public void loadPlugins() {
         ServiceLoader<LibraryPlugin> loader = ServiceLoader.load(LibraryPlugin.class);
 
@@ -26,10 +23,9 @@ public class KernelController {
         for (LibraryPlugin plugin : loader) {
             System.out.println("Plugin found: " + plugin.getName());
             Button pluginButton = new Button(plugin.getName());
-            pluginButton.setMaxWidth(Double.MAX_VALUE); // Faz o botão ocupar toda a largura
-            pluginButton.getStyleClass().add("sidebar-button"); // Adiciona uma classe de estilo
+            pluginButton.setMaxWidth(Double.MAX_VALUE);
+            pluginButton.getStyleClass().add("sidebar-button");
 
-            // A ação do botão agora atualiza a área de conteúdo central.
             pluginButton.setOnAction(e -> contentArea.getChildren().setAll(plugin.getView()));
             
             pluginMenu.getChildren().add(pluginButton);

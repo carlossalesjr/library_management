@@ -1,3 +1,4 @@
+
 .root {
     -fx-font-family: 'Segoe UI', sans-serif;
     -fx-background-color: #F4F4F9;
@@ -44,17 +45,13 @@
     -fx-opacity: 0.9;
 }
 
-
 .save-button {
-    -fx-background-color: #28A745;
+    -fx-background-color: #28A745; 
 }
-
 
 .delete-button {
-    -fx-background-color: #DC3545;
+    -fx-background-color: #DC3545; 
 }
-
-
 
 .text-field {
     -fx-background-radius: 5;

@@ -1,0 +1,64 @@
+
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #F4F4F9;
+}
+
+.header-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.table-view {
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #E0EFFF;
+}
+
+.form-pane {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.button {
+    -fx-background-color: #6C757D; 
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+.save-button {
+    -fx-background-color: #28A745; 
+}
+
+.delete-button {
+    -fx-background-color: #DC3545; 
+}
+
+.text-field {
+    -fx-background-radius: 5;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5;
+}
+
+.text-field:focused {
+    -fx-border-color: #007BFF;
+}

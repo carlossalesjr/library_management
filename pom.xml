@@ -17,6 +17,7 @@
         <module>library-api</module>
         <module>library-kernel</module>
         <module>user-management-plugin</module>
+        <module>book-management-plugin</module>
     </modules>
 
     <build>

@@ -23,6 +23,7 @@
             <artifactId>javafx-controls</artifactId>
             <version>17.0.10</version>
         </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
@@ -34,7 +35,14 @@
             <artifactId>user-management-plugin</artifactId>
             <version>1.0.0</version>
         </dependency>
-        </dependencies>
+
+        <dependency>
+            <groupId>com.work</groupId>
+            <artifactId>book-management-plugin</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <plugins>
