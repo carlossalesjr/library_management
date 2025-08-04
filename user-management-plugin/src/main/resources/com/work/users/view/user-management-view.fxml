@@ -10,6 +10,19 @@
          <padding><Insets bottom="20.0" left="20.0" right="10.0" top="20.0" /></padding>
          <children>
             <Label styleClass="header-label" text="All Users" />
+
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                     <Label text="Sort by:" />
+                     <ComboBox fx:id="sortComboBox" prefWidth="200.0" />
+               </children>
+               <padding>
+                     <Insets bottom="10.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <children>
+            <Label styleClass="header-label" text="All Users" />
             <TableView fx:id="userTable" VBox.vgrow="ALWAYS">
                <columns>
                   <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />

@@ -3,7 +3,9 @@ package com.work.users.controller;
 import com.work.api.controller.GenericController;
 import com.work.api.dao.UserDAO;
 import com.work.api.model.User;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -19,9 +21,36 @@ public class UserManagementController extends GenericController<User> {
     @FXML private TextField nameField;
     @FXML private TextField emailField;
     @FXML private Label formHeaderLabel;
+    @FXML private ComboBox<String> sortComboBox;
 
     public UserManagementController() {
         this.dao = new UserDAO();
+    }
+
+    @Override
+    public void initialize() {
+        super.initialize();
+        setupSortComboBox();
+    }
+    
+    private void setupSortComboBox() {
+        sortComboBox.setItems(FXCollections.observableArrayList("Default (ID)", "Name"));
+        sortComboBox.getSelectionModel().selectFirst();
+        sortComboBox.getSelectionModel().selectedItemProperty().addListener(
+            (observable, oldValue, newValue) -> refreshTable()
+        );
+    }
+
+    @Override
+    public void refreshTable() {
+        String selection = sortComboBox.getSelectionModel().getSelectedItem();
+        UserDAO.SortBy criteria = UserDAO.SortBy.ID;
+
+        if ("Name".equals(selection)) {
+            criteria = UserDAO.SortBy.NAME;
+        } 
+
+        getTableView().setItems(FXCollections.observableArrayList(((UserDAO) dao).findAll(criteria)));
     }
 
     @Override
@@ -42,7 +71,7 @@ public class UserManagementController extends GenericController<User> {
 
     @Override
     protected void clearForm() {
-        userTable.getSelectionModel().clearSelection();
+        getTableView().getSelectionModel().clearSelection();
         selectedEntity = null;
         formHeaderLabel.setText("Add New User");
         nameField.clear();
@@ -65,9 +94,7 @@ public class UserManagementController extends GenericController<User> {
     }
     
     @Override
-    protected void setEntityToForm(User entity) {
-        // Este método seria usado se precisássemos de definir a entidade a partir de fora
-    }
+    protected void setEntityToForm(User entity) {}
 
     @Override
     protected TableView<User> getTableView() {

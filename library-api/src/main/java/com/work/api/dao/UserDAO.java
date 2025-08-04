@@ -11,6 +11,12 @@ import java.util.List;
 
 public class UserDAO implements GenericDAO<User> {
 
+    public enum SortBy {
+        ID,
+        NAME,
+        REGISTRATION_DATE
+    }
+
     public void save(User user) {
         EntityManager em = JPAUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
@@ -48,22 +54,36 @@ public class UserDAO implements GenericDAO<User> {
         }
     }
 
-    public User findById(Long user_id) {
+    public User findById(Long id) {
         EntityManager em = JPAUtil.getEntityManager();
         try {
-            return em.find(User.class, user_id);
+            return em.find(User.class, id);
+        } finally {
+            em.close();
+        }
+    }
+
+    public List<User> findAll(SortBy sortBy) {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            String jpql = "SELECT u FROM User u";
+            switch (sortBy) {
+                case NAME:
+                    jpql += " ORDER BY u.name ASC";
+                    break;
+                case ID:
+                default:
+                    jpql += " ORDER BY u.id ASC";
+                    break;
+            }
+            TypedQuery<User> query = em.createQuery(jpql, User.class);
+            return query.getResultList();
         } finally {
             em.close();
         }
     }
 
     public List<User> findAll() {
-        EntityManager em = JPAUtil.getEntityManager();
-        try {
-            TypedQuery<User> query = em.createQuery("SELECT u FROM User u", User.class);
-            return query.getResultList();
-        } finally {
-            em.close();
-        }
+        return findAll(SortBy.ID);
     }
 }
