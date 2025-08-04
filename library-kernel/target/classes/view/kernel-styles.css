@@ -1,0 +1,50 @@
+
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #EAEBEE; 
+}
+
+.header {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
+
+.header .label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #005B9A; 
+}
+
+.sidebar {
+    -fx-background-color: #F4F4F9;
+    -fx-padding: 10;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-padding: 10 15;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #D6EAF8;
+}
+
+.sidebar-button:focused {
+    -fx-background-color: #AED6F1;
+    -fx-text-fill: #005B9A;
+}
+
+.content-area {
+    -fx-padding: 20;
+}
+
+.welcome-text {
+    -fx-font-size: 28px;
+    -fx-text-fill: #AAAAAA;
+}

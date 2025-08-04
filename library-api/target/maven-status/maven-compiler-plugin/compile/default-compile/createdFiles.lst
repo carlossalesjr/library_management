@@ -1,0 +1,10 @@
+com/work/api/model/Loan.class
+com/work/api/dao/UserDAO.class
+com/work/api/controller/GenericController.class
+com/work/api/LibraryPlugin.class
+com/work/api/model/User.class
+com/work/api/dao/LoanDAO.class
+com/work/api/model/Book.class
+com/work/api/dao/BookDAO.class
+com/work/api/util/JPAUtil.class
+com/work/api/dao/GenericDAO.class

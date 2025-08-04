@@ -18,6 +18,8 @@
         <module>library-kernel</module>
         <module>user-management-plugin</module>
         <module>book-management-plugin</module>
+        <module>loan-management-plugin</module>
+        <module>report-plugin</module>
     </modules>
 
     <build>
