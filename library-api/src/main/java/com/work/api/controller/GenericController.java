@@ -44,7 +44,7 @@ public abstract class GenericController<T> {
     @FXML
     protected void handleDelete() {
         if (selectedEntity != null) {
-            dao.delete(getEntityId(selectedEntity)); // Precisa de um método para obter o ID
+            dao.delete(getEntityId(selectedEntity)); 
             refreshTable();
             clearForm();
         } else {
